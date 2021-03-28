@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "242d3b1d-0eb0-4020-b39e-6f74e1e8905d",
+		"name": "SpaceLaunches",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Launches",
+			"item": [
+				{
+					"name": "Get all Launches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Launch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/5eb87cd9ffd86e000604b32a",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"5eb87cd9ffd86e000604b32a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Launch",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "spacex-key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fairings\": null,\r\n    \"links\": {\r\n        \"patch\": {\r\n            \"small\": \"https://images2.imgbox.com/53/22/dh0XSLXO_o.png\",\r\n            \"large\": \"https://images2.imgbox.com/15/2b/NAcsTEB6_o.png\"\r\n        },\r\n        \"reddit\": {\r\n            \"campaign\": \"https://www.reddit.com/r/spacex/comments/ezn6n0/crs20_launch_campaign_thread\",\r\n            \"launch\": \"https://www.reddit.com/r/spacex/comments/fe8pcj/rspacex_crs20_official_launch_discussion_updates/\",\r\n            \"media\": \"https://www.reddit.com/r/spacex/comments/fes64p/rspacex_crs20_media_thread_videos_images_gifs/\",\r\n            \"recovery\": null\r\n        },\r\n        \"flickr\": {\r\n            \"small\": [],\r\n            \"original\": [\r\n                \"https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg\",\r\n                \"https://live.staticflickr.com/65535/49636202657_e81210a3ca_o.jpg\",\r\n                \"https://live.staticflickr.com/65535/49636202572_8831c5a917_o.jpg\",\r\n                \"https://live.staticflickr.com/65535/49635401423_e0bef3e82f_o.jpg\",\r\n                \"https://live.staticflickr.com/65535/49635985086_660be7062f_o.jpg\"\r\n            ]\r\n        },\r\n        \"presskit\": \"https://www.spacex.com/sites/spacex/files/crs-20_mission_press_kit.pdf\",\r\n        \"webcast\": \"https://youtu.be/1MkcWK2PnsU\",\r\n        \"youtube_id\": \"1MkcWK2PnsU\",\r\n        \"article\": \"https://spaceflightnow.com/2020/03/07/late-night-launch-of-spacex-cargo-ship-marks-end-of-an-era/\",\r\n        \"wikipedia\": \"https://en.wikipedia.org/wiki/SpaceX_CRS-20\"\r\n    },\r\n    \"static_fire_date_utc\": \"2020-03-01T10:20:00.000Z\",\r\n    \"static_fire_date_unix\": 1583058000,\r\n    \"tdb\": false,\r\n    \"net\": false,\r\n    \"window\": 0,\r\n    \"rocket\": \"5e9d0d95eda69973a809d1ec\",\r\n    \"success\": true,\r\n    \"failures\": [],\r\n    \"details\": \"SpaceX's 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission brings essential supplies to the International Space Station using SpaceX's reusable Dragon spacecraft. It is the last scheduled flight of a Dragon 1 capsule. (CRS-21 and up under the new Commercial Resupply Services 2 contract will use Dragon 2.) The external payload for this mission is the Bartolomeo ISS external payload hosting platform. Falcon 9 and Dragon will launch from SLC-40, Cape Canaveral Air Force Station and the booster will land at LZ-1. The mission will be complete with return and recovery of the Dragon capsule and down cargo.\",\r\n    \"crew\": [],\r\n    \"ships\": [],\r\n    \"capsules\": [\r\n        \"5e9e2c5cf359185d753b266f\"\r\n    ],\r\n    \"payloads\": [\r\n        \"5eb0e4d0b6c3bb0006eeb253\"\r\n    ],\r\n    \"launchpad\": \"5e9e4501f509094ba4566f84\",\r\n    \"auto_update\": true,\r\n    \"flight_number\": 91,\r\n    \"name\": \"CRS-20\",\r\n    \"date_utc\": \"2020-03-07T04:50:31.000Z\",\r\n    \"date_unix\": 1583556631,\r\n    \"date_local\": \"2020-03-06T23:50:31-05:00\",\r\n    \"date_precision\": \"hour\",\r\n    \"upcoming\": false,\r\n    \"cores\": [\r\n        {\r\n            \"core\": \"5e9e28a7f359187afd3b2662\",\r\n            \"flight\": 2,\r\n            \"gridfins\": true,\r\n            \"legs\": true,\r\n            \"reused\": true,\r\n            \"landing_attempt\": true,\r\n            \"landing_success\": true,\r\n            \"landing_type\": \"RTLS\",\r\n            \"landpad\": \"5e9e3032383ecb267a34e7c7\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Launch",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "spacex-key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"fairings\": null,\r\n    \"links\": {\r\n        \"patch\": {\r\n            \"small\": \"https://images2.imgbox.com/53/22/dh0XSLXO_o.png\",\r\n            \"large\": \"https://images2.imgbox.com/15/2b/NAcsTEB6_o.png\"\r\n        }\r\n}"
+						},
+						"url": {
+							"raw": "https://api.spacexdata.com/v4/launches/5eb87cd9ffd86e000604b32a",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spacexdata",
+								"com"
+							],
+							"path": [
+								"v4",
+								"launches",
+								"5eb87cd9ffd86e000604b32a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "83d8d646-7988-464e-b1ad-c340d2de7f34",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f6b3af3b-3f5f-4a36-8c34-e524a55e8c32",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
